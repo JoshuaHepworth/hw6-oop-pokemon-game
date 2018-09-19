@@ -1,21 +1,26 @@
 console.log('pokemon');
 
 // ----------------PLAYER OBJECT
-class Player {
-	constructor(name,cards,stats){
-		this.name = name;
-		this.cards = cards;
-		this.stats = stats;
-	}
-	pickCard(){
-		console.log(`${this.name} has chosen`)
-	}
-	recieveCard(){
-		console.log(`${this.name} has recieved ${this.cards}`)
-	}
+const cardsInPlay = [];
+const player = {
+		name: "Josh",
+		cards: 'cards',
+		recieveCard: function(){
+		// cardsInPlay = Math.floor(Math.random()*100)
+		console.log(`${player.name} has recieved ${cardsInPlay}`)
+		}
+		playCard: function(){
+		console.log(`${player.name} has chosen`)
+		}
+		checkStats: function(){
+			console.log(`${player.name} has a score of`)
+		}
 }
-player = new Player('Josh')
-console.log(player)
+	console.log(player.recieveCard())
+	console.log(player);
+	
+// console.log(player)
+// player.recieveCard();
 // The player should be able to:
 
 
@@ -32,8 +37,44 @@ console.log(player)
 
 
 // see the cards that they have played in the past.
+//-------------------THE COMPUTER
+const computer = {
+	name: 'computer',
+	cards: 'cards',
+	stats: 'stats',
+	recieveCard: function(){
+	
+	// cardsInPlay = Math.floor(Math.random()*100)
+		console.log(`${computer.name} has recieved ${cardsInPlay}!`)
+		}
+		playCard: function(){
+			console.log(`${computer.name} has played ${cardsInPlay}!`)
+		}
+
+
+}
+//-------------------THE UI
+
+// The "UI"
+// The user should see the following in the console:
+
+// the scoreboard after each round
+
+// the cards in the player's hand
+
+// the cards in the computer's hand
+
+// the cards that are in play
+
+// the winner of each round (or if there was a tie)
+
+// the winner of the game when the game is over
+
+// the final score when the game is over
+
 
 //------------------GAME OBJECT
+
 // keep a library of all the Pokemon cards that can be played (see the array in the "The Cards" section)
 
 // know what cards have been played
@@ -58,47 +99,7 @@ const game = {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-const cards =
+let cards =
 [
   {
     name: "Bulbasaur",
@@ -156,12 +157,18 @@ const cards =
     damage: 40
   }
 ]
+for(let key in cards) {
+	console.log(cards[key])
+}
 
-// console.log(game);
+console.log(cards);
 
 
+//----------------SHUFFLE DECK
 
-
+const shuffle = (array) => {
+	for (let i = array.length -1; )
+}
 
 
 
